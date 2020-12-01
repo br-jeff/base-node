@@ -1,9 +1,7 @@
-import express from 'express'
-const app = express()
+import express from 'express';
+import routes from './routes/home'
+const app = express();
 
-app.get('/',(req,res)=> {
-    res.send('oi')
-})
+app.use(routes)
 
-
-export default app
+export default app;
