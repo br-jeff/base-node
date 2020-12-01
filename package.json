@@ -1,0 +1,49 @@
+{
+  "name": "base-node",
+  "version": "1.0.0",
+  "description": "Template",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "sucrase ./src -d ./dist --transforms imports",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalavh/base-node.git"
+  },
+  "author": "Kalavh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kalavh/base-node/issues"
+  },
+  "homepage": "https://github.com/kalavh/base-node#readme",
+  "devDependencies": {
+    "@sucrase/jest-plugin": "^2.0.0",
+    "eslint": "^7.14.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.2.1"
+  },
+  "nodemonConfig": {
+    "execMap": {
+      "js": "node -r sucrase/register"
+    }
+  },
+  "jest": {
+    "transform": {
+      ".(js|jsx|ts|tsx)": "@sucrase/jest-plugin"
+    }
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}

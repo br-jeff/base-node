@@ -1,3 +1,3 @@
 #Template to NodeJS
-- TypeScript
 - Jest
+- Eslint
