@@ -1,7 +1,13 @@
-import express from 'express';
-import routes from './routes/home'
-const app = express();
+const express = require('express')
+const routes = require('./routes/public')
+const cors = require('cors')
+const app = express()
 
+
+app.use(cors)
 app.use(routes)
+app.use(express.json())
 
-export default app;
+module.exports = app;
+
+
